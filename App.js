@@ -25,6 +25,7 @@ export default function App() {
         <Button title="ADD" onPress={addGoalHandler} />
       </View>
       <View>
+        {courseGoals.map((goal) => <Text>{goal}</Text>)}
       </View>
     </View>
   );
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   },
   input: {
     width: '80%',
