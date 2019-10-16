@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Modal } from 'react-native';
+import { getOrientationAsync } from 'expo/build/ScreenOrientation/ScreenOrientation';
 
 const GoalInput = props => {
     const [enteredGoal, setEnteredGoal] = useState('');
@@ -55,7 +56,8 @@ const styles = StyleSheet.create({
     },
     button: {
         borderRadius: 50,
-        borderWidth: 10
+        borderWidth: 10,
+        borderColor: '#979797'
     }
 })
 
